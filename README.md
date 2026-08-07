@@ -7,6 +7,7 @@
 
 Automatically generate a beautiful SVG card with your CodeRun statistics (solved problems by difficulty, competition standings) and embed it into your README. Perfect for showcasing your coding progress on GitHub.
 
+## What people see
 <!-- CODE_RUN_STATS_START -->
 <!-- CODE_RUN_STATS_END -->
 
