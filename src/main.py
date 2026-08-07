@@ -1,9 +1,7 @@
-import logging
 import os
 import sys
-
+import logging
 from dotenv import load_dotenv
-
 from .fetcher import Fetcher
 from .renderer import Renderer
 from .updater import Updater
@@ -23,11 +21,11 @@ def load_config() -> dict:
             config[key.lower()] = value
 
     if missing:
-        raise OSError(
+        raise EnvironmentError(
             f"Отсутствуют обязательные переменные окружения: {', '.join(missing)}"
         )
 
-    config["svg_output"] = os.getenv("SVG_OUTPUT", "stats.svg")
+    config["svg_output"] = os.getenv("SVG_OUTPUT", "assets/stats.svg")
     config["readme_path"] = os.getenv("README_PATH", "README.md")
     config["timeout"] = int(os.getenv("TIMEOUT", "10"))
     config["colors"] = {
@@ -37,11 +35,13 @@ def load_config() -> dict:
     }
     return config
 
+
 def setup_logging():
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
+
 
 def main():
     setup_logging()
@@ -49,7 +49,7 @@ def main():
 
     try:
         config = load_config()
-    except OSError as e:
+    except EnvironmentError as e:
         logger.error(str(e))
         sys.exit(1)
 
@@ -74,6 +74,7 @@ def main():
         logger.info("Готово!")
     else:
         logger.warning("README не обновлён, но SVG сохранён.")
+
 
 if __name__ == "__main__":
     main()
