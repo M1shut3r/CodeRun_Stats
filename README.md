@@ -9,6 +9,9 @@ Automatically generate a beautiful SVG card with your CodeRun statistics (solved
 
 ## What people see
 <!-- CODE_RUN_STATS_START -->
+<div align="center">
+  <img src="./assets/stats.svg" alt="CodeRun statistics" width="720"/>
+</div>
 <!-- CODE_RUN_STATS_END -->
 
 ## Features
