@@ -135,7 +135,7 @@ All settings are read from environment variables:
 | `PROFILE`      | Your CodeRun username           | Yes      | —           |
 | `BASE_URL`     | API base URL                    | Yes      | —           |
 | `SEASON`       | Season name (e.g. `2026-summer`)| Yes      | —           |
-| `SVG_OUTPUT`   | Output SVG filename             | No       | `stats.svg` |
+| `SVG_OUTPUT`   | Output SVG filename             | No       | `assets/stats.svg` |
 | `README_PATH`  | Path to README file             | No       | `README.md` |
 | `TIMEOUT`      | HTTP request timeout (seconds)  | No       | `10`        |
 
