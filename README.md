@@ -18,7 +18,6 @@ Automatically generate a beautiful SVG card with your CodeRun statistics (solved
 - 🏆 **Competition info** — current season standings (place, score, solved)
 - 🔄 **Auto-update** — runs every 6 hours via GitHub Actions (or manually on demand)
 - 🎨 **GitHub-themed** — fits perfectly into your profile README
-- 🧩 **Graceful fallback** — shows "No active competitions" if you haven't participated
 
 ## Installation Local
 
