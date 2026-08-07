@@ -43,11 +43,12 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add README.md stats.svg
+          git add README.md
+          if [ -f assets/stats.svg ]; then git add assets/stats.svg; fi
           if git diff --staged --quiet; then
             echo "No changes to commit"
             exit 0
           fi
           git commit -m "Update CodeRun stats"
-          git pull --rebase --autostash origin main
-          git push
+          git pull --rebase origin dev
+          git push --force-with-lease origin dev
