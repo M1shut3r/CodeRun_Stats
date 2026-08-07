@@ -1,0 +1,57 @@
+# Локальные переменные окружения
+.env
+.env.local
+.env.*.local
+
+# Сгенерированные SVG-карточки
+stats.svg
+*.svg
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+.venv
+
+# Логи и базы данных
+*.log
+*.sqlite
+*.db
+
+# Файлы отладки и отчёты тестов
+.pytest_cache/
+.coverage
+htmlcov/
+.tox
+.mypy_cache/
+.ruff_cache/
+
+# Настройки редакторов
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Сборки и дистрибутивы
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Файлы, создаваемые при установке в режиме разработки
+*.egg-info/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Временные файлы
+*.tmp
+*.temp
